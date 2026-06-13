@@ -1,0 +1,15 @@
+#:schema https://developers.openai.com/codex/config-schema.json
+
+model = "google.gemma-4-31b"
+model_catalog_json = "model_catalog.json"
+
+web_search = "disabled"
+
+approvals_reviewer = "auto_review"
+
+[approval_policy.granular]
+sandbox_approval = true
+rules = true
+mcp_elicitations = false
+request_permissions = false
+skill_approval = false
