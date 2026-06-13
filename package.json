@@ -1,0 +1,19 @@
+{
+  "name": "codex-with-gemma4-on-bedrock",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@openai/codex": "^0.139.0"
+  },
+  "scripts": {
+    "codex": "AWS_REGION=us-east-1 CODEX_HOME=./.cache codex --config model_provider=amazon-bedrock",
+    "lint:secrets": "gitleaks protect --staged",
+    "lint:secrets:all": "gitleaks detect --verbose"
+  }
+}
